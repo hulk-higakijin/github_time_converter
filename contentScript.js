@@ -20,15 +20,11 @@ window.onload = function () {
   function updateRelativeTimes() {
     let relativeTimeElements = document.getElementsByTagName("relative-time");
 
-    console.log(relativeTimeElements);
-
     for (let element of relativeTimeElements) {
       // 既に更新されている要素はスキップ
       if (element.hasAttribute("data-updated")) {
         continue;
       }
-
-      console.log("hogehoge");
 
       let datetime = element.getAttribute("datetime");
       let date = new Date(datetime);
@@ -37,9 +33,6 @@ window.onload = function () {
       let formattedDate = `${date.getFullYear()}/${
         date.getMonth() + 1
       }/${date.getDate()}`;
-
-      console.log(element.textContent);
-      console.log(formattedDate);
 
       // 新しい span 要素を作成し、絶対時間をセットします
       let span = document.createElement("span");
