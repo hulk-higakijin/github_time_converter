@@ -1,0 +1,6 @@
+# GithubTimeConverter
+convert github time to absolute time.
+
+# How to use
+1. clone this repository
+2. import this project as "Unpackaged extensions" in chrome://extensions
