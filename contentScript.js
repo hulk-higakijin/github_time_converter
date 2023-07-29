@@ -29,22 +29,22 @@ window.onload = function () {
       let datetime = element.getAttribute("datetime");
       let date = new Date(datetime);
 
-      // dateオブジェクトを必要な形式に変換します。以下は例です。
+      // dateオブジェクトを必要な形式に変換
       let formattedDate = `${date.getFullYear()}/${
         date.getMonth() + 1
       }/${date.getDate()}`;
 
-      // 新しい span 要素を作成し、絶対時間をセットします
+      // 新しい span 要素を作成し、絶対時間をセット
       let span = document.createElement("span");
       span.textContent = formattedDate;
 
-      // <relative-time> 要素の後ろに新しい span 要素を追加します
+      // <relative-time> 要素の後ろに新しい span 要素を追加
       element.parentNode.insertBefore(span, element.nextSibling);
 
       // 更新済みとマーク
       element.setAttribute("data-updated", "true");
 
-      // relative-time要素を非表示にする
+      // relative-time要素を非表示
       element.style.display = "none";
     }
   }
