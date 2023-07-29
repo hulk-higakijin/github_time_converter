@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Time Converter",
+  "version": "1.0",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "",
+    "default_icon": { }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
