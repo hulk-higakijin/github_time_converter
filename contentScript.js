@@ -1,3 +1,5 @@
+const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
 window.onload = function () {
   // DOM変更を監視する関数
   function observeMutations() {
@@ -28,11 +30,12 @@ window.onload = function () {
 
       let datetime = element.getAttribute("datetime");
       let date = new Date(datetime);
+      let weekday = weekdays[date.getDay()];
 
       // dateオブジェクトを必要な形式に変換
       let formattedDate = `${date.getFullYear()}/${
         date.getMonth() + 1
-      }/${date.getDate()}`;
+      }/${date.getDate()}(${weekday})`;
 
       // 新しい span 要素を作成し、絶対時間をセット
       let span = document.createElement("span");
