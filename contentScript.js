@@ -30,10 +30,11 @@ window.onload = function () {
 
       let datetime = element.getAttribute("datetime");
       let date = new Date(datetime);
+      let year = date.getFullYear().toString().slice(-2)
       let weekday = weekdays[date.getDay()];
 
       // dateオブジェクトを必要な形式に変換
-      let formattedDate = `${date.getFullYear()}/${
+      let formattedDate = `${year}/${
         date.getMonth() + 1
       }/${date.getDate()}(${weekday})`;
 
